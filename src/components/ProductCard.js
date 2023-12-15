@@ -9,7 +9,11 @@ function ProductCard(props) {
     <div className="col-12 col-sm-6 col-lg-4">
       <div className="__item">
         <figure className="__image">
-          <img width={188} src="img/goods_img/1.jpg" alt="demo" />
+          <img
+            width={188}
+            src={`img/goods_img/${props.product.id}.jpg`}
+            alt="demo"
+          />
         </figure>
         <div className="__content">
           <h4 className="h6 __title">

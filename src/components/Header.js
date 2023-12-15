@@ -50,8 +50,11 @@ class Header extends Component {
                         <ul className="submenu">
                           {this.props.categories &&
                             this.props.categories.map((i) => (
-                              <li style={{ cursor: "pointer" }}>
-                                {i.categoryName}
+                              <li
+                                onClick={() => this.props.getProducts(i.id)}
+                                style={{ cursor: "pointer" }}
+                              >
+                                <Link to="/">{i.categoryName}</Link>
                               </li>
                             ))}
                         </ul>

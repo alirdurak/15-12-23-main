@@ -62,16 +62,8 @@ const ProductDetail = ({ getProductBySlug, getCategoryName, addCart }) => {
                             <i className="fontello-star" />
                           </span>
                         </div>
-                        <p>
-                          The generated Lorem Ipsum is therefore always free
-                          from repetition injected humour, or non-characteristic
-                          words etc.
-                        </p>
-                        <p>
-                          Susp endisse ultricies nisi vel quam suscipit.
-                          Sabertooth peacock flounder; chain pickerel
-                          hatchetfish, pencilfish snailfish
-                        </p>
+                        <p>{product.desc}</p>
+                        <p>{product.desc}</p>
                         <div className="__add-to-cart">
                           <div className="quantity-counter js-quantity-counter">
                             <span className="__btn __btn--minus" />

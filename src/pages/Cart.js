@@ -88,7 +88,7 @@ class Cart extends Component {
               <div className="row">
                 <div className="col-12">
                   <div className="cart">
-                    <form className="cart__form" action="/">
+                    <div className="cart__form" action="/">
                       <div className="cart__table">
                         <table>
                           <thead>
@@ -190,8 +190,8 @@ class Cart extends Component {
                                 <tr>
                                   <td colSpan={2}>
                                     <a
+                                      onClick={this.props.clearCart}
                                       className="custom-btn custom-btn--medium custom-btn--style-1"
-                                      href="/"
                                     >
                                       Proceed to checkout
                                     </a>
@@ -219,7 +219,7 @@ class Cart extends Component {
                           </div>
                         </div>
                       </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
               </div>

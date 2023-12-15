@@ -41,7 +41,7 @@ export default function App() {
   };
 
   const getBlogBySlugs = (slug) => {
-    return blog.filter((item) => item.slug === slug);
+    return blog.find((item) => item.slug === slug);
   };
 
   const getProducts = (categoryId) => {
@@ -67,10 +67,13 @@ export default function App() {
   const addCart = (product) => {
     setCart([...cart, product]);
   };
+  const clearCart = () => {
+    setCart([]);
+  };
 
   return (
     <>
-      <Header categories={categories} />
+      <Header getProducts={getProducts} categories={categories} />
       <Routes>
         <Route
           path="/"
@@ -91,7 +94,10 @@ export default function App() {
           element={<BlogDetail getBlogBySlugs={getBlogBySlugs} />}
         />
         <Route path="/blog" element={<BlogList blog={blog} />} />
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route
+          path="/cart"
+          element={<Cart clearCart={clearCart} cart={cart} />}
+        />
         <Route
           path="/product/:slug"
           element={
